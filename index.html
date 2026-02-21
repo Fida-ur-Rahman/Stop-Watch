@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch with Lap Timer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Stop.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-stopwatch"></i> Stopwatch with Lap Timer</h1>
+            <p class="subtitle">Track time with precision and record lap intervals</p>
+        </header>
+        
+        <main>
+            <div class="stopwatch-display">
+                <div class="time-display" id="display">00:00:00</div>
+                <div class="subtitle">HH:MM:SS</div>
+            </div>
+            
+            <div class="buttons-container">
+                <button class="btn btn-start" id="startBtn">
+                    <i class="fas fa-play"></i> Start
+                </button>
+                <button class="btn btn-pause" id="pauseBtn" disabled>
+                    <i class="fas fa-pause"></i> Pause
+                </button>
+                <button class="btn btn-reset" id="resetBtn" disabled>
+                    <i class="fas fa-redo"></i> Reset
+                </button>
+                <button class="btn btn-lap" id="lapBtn" disabled>
+                    <i class="fas fa-flag"></i> Lap
+                </button>
+            </div>
+            
+            <div class="laps-container">
+                <div class="laps-header">
+                    <span>Lap</span>
+                    <span>Time</span>
+                    <span>Duration</span>
+                </div>
+                <div id="lapsList">
+                    <div class="no-laps" id="noLapsMessage">No laps recorded yet</div>
+                </div>
+            </div>
+        </main>
+        
+        <div class="instructions">
+            <h3><i class="fas fa-info-circle"></i> How to use</h3>
+            <ul>
+                <li><strong>Start:</strong> Begins the stopwatch timer</li>
+                <li><strong>Pause:</strong> Temporarily stops the timer</li>
+                <li><strong>Reset:</strong> Resets the timer to 00:00:00 and clears all laps</li>
+                <li><strong>Lap:</strong> Records the current time while the stopwatch continues running</li>
+                <li>Laps are displayed with the time they were recorded and the duration since the previous lap</li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Stopwatch with Lap Timer &copy; 2026 | Created with HTML, CSS, and JavaScript</p>
+    </footer>
+
+</body>
+<script src="./stopwatch.js"></script>
+</html>
